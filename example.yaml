@@ -1,0 +1,5 @@
+weather:
+  - platform: colorfulclouds
+    api_key: YOUR_API_KEY 
+    latitude: 30.7046
+    longitude: 121.6544
