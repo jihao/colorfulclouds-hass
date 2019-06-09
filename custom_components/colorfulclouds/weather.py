@@ -8,7 +8,7 @@ from homeassistant.const import (TEMP_CELSIUS, TEMP_FAHRENHEIT, CONF_API_KEY, CO
 import requests
 import json
 
-VERSION = '0.1'
+VERSION = '0.1.1'
 DOMAIN = 'colorfulclouds'
 
 # mapping, why? because 
@@ -119,7 +119,7 @@ class ColorfulCloudsWeather(WeatherEntity):
     def pm10(self):
         """pm10，质量浓度值"""
         return self._realtime_data['result']['realtime']['air_quality']['pm10']
-    
+
     @property
     def o3(self):
         """臭氧，质量浓度值"""
@@ -144,7 +144,7 @@ class ColorfulCloudsWeather(WeatherEntity):
     def aqi(self):
         """AQI（国标）"""
         return self._realtime_data['result']['realtime']['air_quality']['aqi']['chn']
-    
+
     @property
     def aqi_description(self):
         """AQI（国标）"""
@@ -159,10 +159,28 @@ class ColorfulCloudsWeather(WeatherEntity):
     def aqi_usa_description(self):
         """AQI USA"""
         return self._realtime_data['result']['realtime']['air_quality']['description']['usa']
+    
+    @property
+    def forecast_hourly(self):
+        """实时天气预报描述-小时"""
+        return self._forecast_data['result']['hourly']['description']
+
+    @property
+    def forecast_minutely(self):
+        """实时天气预报描述-分钟"""
+        return self._forecast_data['result']['minutely']['description']
+
+    @property
+    def forecast_keypoint(self):
+        """实时天气预报描述-注意事项"""
+        return self._forecast_data['result']['forecast_keypoint']
 
     @property
     def state_attributes(self):
         data = super(ColorfulCloudsWeather, self).state_attributes
+        data['forecast_hourly'] = self.forecast_hourly
+        data['forecast_minutely'] = self.forecast_minutely
+        data['forecast_keypoint'] = self.forecast_keypoint
         data['pm25'] = self.pm25
         data['pm10'] = self.pm10
         data['o3'] = self.o3
