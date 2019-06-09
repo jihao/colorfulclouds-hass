@@ -23,8 +23,18 @@ Demo: lovelace-ui weather-forecast & custom:weather-card
 
 ## Installation
 
-*手工安装* 或者使用 *custom_updater*
+**custom_updater**
+```yaml
+custom_updater:
+  track:
+    - cards
+    - components
+  component_urls:
+    - https://raw.githubusercontent.com/jihao/colorfulclouds-hass/master/colorfulclouds.json
+    - ...
+```
 
+**手工安装** 
 1. Using the tool of choice open the directory (folder) for your HA configuration (where you find `configuration.yaml`).
 2. If you do not have a `custom_components` directory (folder) there, you need to create it.
 3. In the `custom_components` directory (folder) create a new folder called `colorfulclouds`.
