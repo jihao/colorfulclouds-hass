@@ -3,7 +3,7 @@
 [![GitHub Release][releases-shield]][releases]
 [![GitHub Activity][commits-shield]][commits]
 [![custom_updater][customupdaterbadge]][customupdater]
-[![License][license-shield]](LICENSE.md)
+[![License][license-shield]](LICENSE)
 
 
 _Component to integrate with [colorfulclouds][colorfulclouds]._
@@ -65,14 +65,14 @@ If you want to contribute to this please read the [Contribution guidelines](CONT
 ***
 
 [colorfulclouds]: https://open.caiyunapp.com/%E5%BD%A9%E4%BA%91%E5%A4%A9%E6%B0%94_API/v2.5
-[commits-shield]: https://img.shields.io/github/commit-activity/y/jihao/colorfulclouds.svg?style=for-the-badge
-[commits]: https://github.com/jihao/colorfulclouds/commits/master
+[commits-shield]: https://img.shields.io/github/commit-activity/y/jihao/colorfulclouds-hass.svg?style=for-the-badge
+[commits]: https://github.com/jihao/colorfulclouds-hass/commits/master
 [customupdater]: https://github.com/custom-components/custom_updater
 [customupdaterbadge]: https://img.shields.io/badge/custom__updater-true-success.svg?style=for-the-badge
 
 [exampleimg]: example.png
 [exampleimg2]: example-entity.png
-[license-shield]: https://img.shields.io/github/license/jihao/colorfulclouds.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/jihao/colorfulclouds-hass.svg?style=for-the-badge
 [maintenance-shield]: https://img.shields.io/badge/maintainer-Joakim%20Sørensen%20%40ludeeus-blue.svg?style=for-the-badge
-[releases-shield]: https://img.shields.io/github/release/jihao/colorfulclouds.svg?style=for-the-badge
-[releases]: https://github.com/jihao/colorfulclouds/releases
+[releases-shield]: https://img.shields.io/github/release/jihao/colorfulclouds-hass.svg?style=for-the-badge
+[releases]: https://github.com/jihao/colorfulclouds-hass/releases
