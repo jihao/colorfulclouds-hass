@@ -8,7 +8,7 @@ from homeassistant.const import (TEMP_CELSIUS, TEMP_FAHRENHEIT, CONF_API_KEY, CO
 import requests
 import json
 
-VERSION = '0.1.2'
+VERSION = '0.1.3'
 DOMAIN = 'colorfulclouds'
 
 # mapping, why? because 
@@ -103,7 +103,7 @@ class ColorfulCloudsWeather(WeatherEntity):
 
     @property
     def pressure(self):
-        return self._realtime_data['result']['realtime']['pressure']
+        return round(float(self._realtime_data['result']['realtime']['pressure']) / 100, 2)
 
     @property
     def attribution(self):
