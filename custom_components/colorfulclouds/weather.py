@@ -8,7 +8,7 @@ from homeassistant.const import (TEMP_CELSIUS, TEMP_FAHRENHEIT, CONF_API_KEY, CO
 import requests
 import json
 
-VERSION = '0.1.1'
+VERSION = '0.1.2'
 DOMAIN = 'colorfulclouds'
 
 # mapping, why? because 
