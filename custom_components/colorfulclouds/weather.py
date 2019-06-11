@@ -202,7 +202,7 @@ class ColorfulCloudsWeather(WeatherEntity):
                 ATTR_FORECAST_TIME: datetime.strptime(time_str, '%Y-%m-%d'),
                 ATTR_FORECAST_CONDITION: CONDITION_MAP[self._forecast_data['result']['daily']['skycon'][i]['value']],
                 ATTR_FORECAST_PRECIPITATION: self._forecast_data['result']['daily']['precipitation'][i]['avg'],
-                ATTR_FORECAST_TEMP: self._forecast_data['result']['daily']['temperature'][i]['avg'],
+                ATTR_FORECAST_TEMP: self._forecast_data['result']['daily']['temperature'][i]['max'],
                 ATTR_FORECAST_TEMP_LOW: self._forecast_data['result']['daily']['temperature'][i]['min'],
                 ATTR_FORECAST_WIND_BEARING: self._forecast_data['result']['daily']['wind'][i]['avg']['direction'],
                 ATTR_FORECAST_WIND_SPEED: self._forecast_data['result']['daily']['wind'][i]['avg']['speed']

@@ -61,12 +61,12 @@ weather:
 
 ## Configuration options
 
-Key | Type | Required | Description
+Key | Type | Required | Default | Description
 -- | -- | -- | --
-`api_key` | `string` | `True` | 彩云天气 API TOKEN
-`api_version` | `string` | `False` | 彩云天气 API Version, 默认 V2.5
-`latitude` | `string` | `True` | 纬度
-`longitude` | `string` | `True` | 经度
+`api_key` | `string` | `True` | None | 彩云天气 API TOKEN
+`api_version` | `string` | `False` | V2.5 | 彩云天气 API Version
+`latitude` | `string` | `False` | hass.config.latitude | 纬度
+`longitude` | `string` | `False` | hass.config.longitude | 经度
 
 ## Contributions are welcome!
 
