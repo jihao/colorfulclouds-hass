@@ -62,7 +62,7 @@ weather:
 ## Configuration options
 
 Key | Type | Required | Default | Description
--- | -- | -- | --
+-- | -- | -- | -- | --
 `api_key` | `string` | `True` | None | 彩云天气 API TOKEN
 `api_version` | `string` | `False` | V2.5 | 彩云天气 API Version
 `latitude` | `string` | `False` | hass.config.latitude | 纬度
