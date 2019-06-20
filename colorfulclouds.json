@@ -1,6 +1,6 @@
 {
     "colorfulclouds": {
-        "version": "0.1.3",
+        "version": "0.1.4",
         "local_location": "/custom_components/colorfulclouds/weather.py",
         "remote_location": "https://raw.githubusercontent.com/jihao/colorfulclouds-hass/master/custom_components/colorfulclouds/weather.py",
         "visit_repo": "https://github.com/jihao/colorfulclouds-hass",

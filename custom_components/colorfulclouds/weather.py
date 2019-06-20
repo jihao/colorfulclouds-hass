@@ -8,7 +8,7 @@ from homeassistant.const import (TEMP_CELSIUS, TEMP_FAHRENHEIT, CONF_API_KEY, CO
 import requests
 import json
 
-VERSION = '0.1.3'
+VERSION = '0.1.4'
 DOMAIN = 'colorfulclouds'
 
 # mapping, why? because 
@@ -176,6 +176,16 @@ class ColorfulCloudsWeather(WeatherEntity):
         return self._forecast_data['result']['forecast_keypoint']
 
     @property
+    def cloudrate(self):
+        """云量"""
+        return self._realtime_data['result']['realtime']['cloudrate']
+
+    @property
+    def life_index(self):
+        """生活指数"""
+        return self._realtime_data['result']['realtime']['life_index']
+
+    @property
     def state_attributes(self):
         data = super(ColorfulCloudsWeather, self).state_attributes
         data['forecast_hourly'] = self.forecast_hourly
@@ -191,6 +201,9 @@ class ColorfulCloudsWeather(WeatherEntity):
         data['aqi_description'] = self.aqi_description
         data['aqi_usa'] = self.aqi_usa
         data['aqi_usa_description'] = self.aqi_usa_description
+        data['cloudrate'] = self.cloudrate
+        data['life_index'] = self.life_index
+        
         return data  
 
     @property
